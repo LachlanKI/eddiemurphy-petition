@@ -1,0 +1,18 @@
+<div id="login-wrap">
+    <div id="login-wrap2">
+        <form id="login" action="/login" method="post">
+            <div id="login-input-wrap">
+                <input type="text" name="email" placeholder="email address">
+                <input type="password" name="password" placeholder="password">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            </div>
+            <button type="submit">login</button>
+        </form>
+        <img src="/public/imgs/eddie-orange.png" alt="eddie in his fav get up">
+    </div>
+
+    {{#if oops}}
+    <h3 class="oops">{{oops}}</h3>
+    {{/if}}
+
+</div>

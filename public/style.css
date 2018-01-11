@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Bangers', sans-serif;
+}
+
+body {
+    background-color: #FF0662;
+}
+
+/*<<<<<<<<<<<<<<<<<HEADER>>>>>>>>>>>>>>>>>*/
+
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+#head-wrap1 {
+    display: none;
+    margin-top: 20px;
+    color: #26F8B3;
+    width: 80%;
+    text-align: center;
+    font-size: 83px;
+    text-shadow: 5px 5px #FFEB1F;
+}
+
+#head-wrap2 {
+    display: none;
+    margin-top: 20px;
+    color: #26F8B3;
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 3px 3px #FFEB1F;
+}
+
+/*<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>*/
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    width: 29px;
+    height: 40px;
+    margin: 0px 10px 10px 0px;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+}
+
+footer img:hover {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+
+footer p {
+    margin: 0px 0px 0px 10px;
+}
+
+/*<<<<<<<<<<<<<<<<<MISC>>>>>>>>>>>>>>>>>*/
+
+@keyframes jiggle {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(1deg)}
+    50% {transform: rotate(0deg)}
+    75% {transform: rotate(-1deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.oops {
+    position: absolute;
+    top: 140px;
+    animation: 0.1s jiggle;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-shadow:1px 1px #FFEB1F;
+}
+
+h4 {
+    color: #26F8B3;
+}
+
+/*<<<<<<<<<<<<<<<<<REGISTER>>>>>>>>>>>>>>>>>*/
+
+.register-wrap {
+    top: 65px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#register {
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #DAFF00;
+    transform: rotate(20deg);
+    border-radius: 20px;
+    border: 2px solid #0D93B2;
+    box-shadow: 6px 6px #0D93B2;
+}
+
+#register input {
+    outline: none;
+    background-color: #FF06BB;
+    border-radius: 5px;
+    border: 2px solid #0D93B2;
+    box-shadow: 2px 2px #0D93B2;
+    transition: all 1s;
+}
+
+#register input:placeholder-shown {
+    background-color: #F5FF22;
+}
+
+#register input:focus {
+    transform: scale(1.4);
+}
+
+#register button {
+    background-color: #FF6B22;
+    border-radius: 5px;
+    border: 2px solid #0D93B2;
+    box-shadow: 2px 2px #0D93B2;
+    transition: all 1s;
+}
+
+@keyframes colour-mess {
+    0% {background-color: #FF6B22}
+    50% {background-color: #22FFEE}
+    100% {background-color: #FF6B22}
+}
+
+#register button:hover {
+    transform: scale(1.5);
+    animation-name: colour-mess;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+#register button:focus {
+    outline: 0;
+}
+
+.register-wrap a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid #26F8B3;
+    box-shadow: 2px 2px #26F8B3;
+    background-color: #FFEB1F;
+    margin-top: 5px;
+    transform: rotate(-20deg);
+    transition: all 1s;
+}
+
+.register-wrap a:hover {
+    transform: rotate(10deg) scale(1.5);
+}
+
+/*<<<<<<<<<<<<<<<<<LOGIN>>>>>>>>>>>>>>>>>*/
+
+#login-wrap {
+    top: 65px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-wrap2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 550px;
+    height: 350px;
+    background-color: rgb(255, 60, 25);
+    border-radius: 20px;
+    border: 1px solid #0940BE;
+    box-shadow: 6px 6px #0940BE;
+    transform: rotate(-5deg);
+    transition: all 6s;
+}
+
+#login-wrap2 form {
+    background-color: rgb(255, 50, 25);
+    margin: 60px 0px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 180px;
+    transform: rotate(9deg);
+    border-radius: 5px;
+    box-shadow: 2px 2px #C83BF1;
+    transition: all 1s;
+}
+
+@keyframes border-colour {
+    0% {box-shadow: 2px 2px  #C83BF1}
+    10% {box-shadow: 2px 2px  #A93BF1}
+    20% {box-shadow: 2px 2px  #943BF1}
+    30% {box-shadow: 2px 2px #653BF1}
+    40% {box-shadow: 2px 2px  #473BF1}
+    50% {box-shadow: 2px 2px  #0940BE}
+    60% {box-shadow: 2px 2px  #473BF1}
+    70% {box-shadow: 2px 2px #653BF1}
+    80% {box-shadow: 2px 2px  #943BF1}
+    90% {box-shadow: 2px 2px  #A93BF1}
+    100% {box-shadow: 2px 2px  #C83BF1}
+}
+
+#login-wrap2:hover {
+    transform: rotate(5deg);
+}
+
+#login-wrap2 form:hover {
+    animation: 0.5s border-colour;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: rotate(0deg);
+}
+
+#login-wrap2 form #login-input-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 200px;
+}
+
+#login-wrap2 form #login-input-wrap input {
+    width: 100px;
+    outline: none;
+    background-color: #FF06BB;
+    border-radius: 5px;
+    border: 2px solid #C83BF1;
+    box-shadow: 2px 2px #C83BF1;
+    transition: all 1s;
+}
+
+#login-wrap2 form #login-input-wrap input:focus {
+    transform: scale(1.4);
+}
+
+#login-wrap2 form #login-input-wrap input:placeholder-shown {
+    background-color: #B0F13B;
+}
+
+#login-wrap2 img {
+    width: 250px;
+    height: 380px;
+}
+
+#login-wrap2 form button {
+    width: 50px;
+    margin-bottom: 15px;
+    background-color: #FF6B22;
+    border-radius: 5px;
+    border: 2px solid #0D93B2;
+    box-shadow: 2px 2px #0D93B2;
+    transition: all 1s;
+    transform: rotate(-13deg);
+}
+
+#login-wrap2 form button:hover {
+    transform: scale(1.5);
+    animation-name: colour-mess;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+#login-wrap2 form button:focus {
+    outline: 0;
+}
+
+/*<<<<<<<<<<<<<<<<<PROFILE>>>>>>>>>>>>>>>>>*/
+
+#profile-wrap {
+    top: 65px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-wrap2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 550px;
+    height: 350px;
+    background-color: #FFEB68;
+    border-radius: 20px;
+    border: 0px solid #654EFF;
+    border-width: 0px 3px 3px 0px;
+    box-shadow: 6px 6px #654EFF;
+    transform: rotate(-5deg);
+    transition: all 6s;
+}
+
+#profile-wrap2 form {
+    background-color: rgb(132, 104, 255);
+    margin: 60px 0px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 180px;
+    transform: rotate(9deg);
+    border-radius: 5px;
+    box-shadow: 2px 2px #C83BF1;
+    transition: all 1s;
+}
+
+#profile-wrap2:hover {
+    transform: rotate(5deg);
+}
+
+#profile-wrap2 form:hover {
+    animation: 0.5s border-colour;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: rotate(0deg);
+}
+
+#profile-wrap2 form #profile-input-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 95px;
+    width: 200px;
+}
+
+#profile-wrap2 form #profile-input-wrap input {
+    width: 100px;
+    outline: none;
+    background-color: #F03AFF;
+    border-radius: 5px;
+    border: 2px solid #CC3F92;
+    box-shadow: 2px 2px #CC3F92;
+    transition: all 1s;
+}
+
+#profile-wrap2 form #profile-input-wrap input:focus {
+    transform: scale(1.4);
+}
+
+#profile-wrap2 form #profile-input-wrap input:placeholder-shown {
+    background-color: #81F6FF;
+}
+
+#profile-wrap2 img {
+    width: 130px;
+    height: 300px;
+    margin: 30px 30px 0px 0px;
+}
+
+#profile-wrap2 form button {
+    width: 50px;
+    margin-bottom: 15px;
+    background-color: #FF6B22;
+    border-radius: 5px;
+    border: 2px solid #0D93B2;
+    box-shadow: 2px 2px #0D93B2;
+    transition: all 1s;
+    transform: rotate(-13deg);
+}
+
+#profile-wrap2 form button:hover {
+    transform: scale(1.5);
+    animation-name: colour-mess;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+#profile-wrap2 form button:focus {
+    outline: 0;
+}
+
+#profile-wrap h1 {
+    margin-top: 40px;
+    color: #22F8B3;
+    text-shadow: 2px 2px #FEEB5F;
+}
+
+/*<<<<<<<<<<<<<<<<<SIGNATURE>>>>>>>>>>>>>>>>>*/
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 75px;
+}
+
+#info {
+    margin: 20px;
+    background-color: rgb(30, 33, 40);
+    box-shadow: 2px 2px rgb(216, 216, 216);
+    transform: rotate(-2deg);
+    height: 350px;
+    width: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hits {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+    margin-top: 25px;
+    padding: 5px;
+    width: 200px;
+    height: 140px;
+}
+
+#hits ul {
+    padding: 0px;
+}
+
+#canvas {
+    height: 125px;
+    width: 125px;
+    background-color: rgb(50, 50, 53);
+    margin-bottom: 30px;
+    border-radius: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#controls {
+    margin-right: 7px;
+    height: 54px;
+    width: 54px;
+    border-radius: 200px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#colour {
+    margin-left: 10px;
+    text-align: center;
+    width: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#size {
+    margin-right: 10px;
+    text-align: center;
+    width: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#controls button {
+    padding: 0px;
+    margin: 0px;
+}
+
+#submit button {
+    padding: 0px;
+    margin: 0px;
+}
+
+canvas {
+    margin: 20px;
+    box-shadow: 3px 3px #7DFC55;
+    border-radius: 20px;
+    background-image: url('/public/imgs/theMurph.jpg');
+    background-size: cover;
+    transform: rotate(3deg);
+}
+
+/*<<<<<<<<<<<<<<<<<THANKS>>>>>>>>>>>>>>>>>*/
+
+#thanks {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#thanks h1 {
+    margin-bottom: 15px;
+}
+
+#murpher {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#murpher:hover #ed {
+    transform: translateX(-250px);
+}
+
+#murpher:hover #sg {
+    transform: translateX(250px);
+}
+
+#ed {
+    position: relative;
+    width: 283px;
+    height: 400px;
+    border-radius: 20px;
+    transition: all 8s;
+}
+
+#sg {
+    position: relative;
+    z-index: 5;
+    width: 283px;
+    height: 400px;
+    border-radius: 20px;
+    transition: all 8s;
+}
+
+#other {
+    margin-top: 20px;
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+}
+
+#other a {
+    text-decoration: none;
+    color: black;
+}
+
+/*<<<<<<<<<<<<<<<<<COOL-PEOPLE>>>>>>>>>>>>>>>>>*/
+
+#cool {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#list {
+    width: 700px;
+    height: 445px;
+    background-image: url('/public/imgs/eddie-login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#list ul {
+    margin: 10px 0px 0px 10px;
+    font-size: 15px;
+    background-color: rgb(255, 250, 223);
+    border-radius: 5px;
+    box-shadow: 4px 4px rgb(255, 250, 223);
+    width: 150px;
+    height: 170px;
+    overflow: scroll;
+    padding-left: 0px;
+    transform: rotate(5deg);
+}
+
+#list ul li {
+    margin: 0px;
+}
+
+#list ul li:nth-child(odd) {
+    background-color: pink;
+}
+
+/*<<<<<<<<<<<<<<<<<UPDATE>>>>>>>>>>>>>>>>>*/
+
+#update {
+    position: absolute;
+    top: 60px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*<<<<<<<<<<<<<<<<<404>>>>>>>>>>>>>>>>>*/
+
+#eddie-error {
+    width: 50%;
+}

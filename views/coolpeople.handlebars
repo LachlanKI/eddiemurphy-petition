@@ -1,0 +1,21 @@
+
+<div id="cool">
+    <h3>other eddheads</h3>
+
+    {{#if oops}}
+    <h3 class="oops">no one has registered in {{oops}}</h3>
+    {{/if}}
+    <div id="list">
+        <ul>
+            {{#coolpeople}}
+            {{#if this.homepage}}
+            <li><a href="http://{{this.homepage}}" target="_blank">{{this.firstname}} {{this.lastname}}</a> {{myHelper this}}</li>
+            {{else}}
+            <li>{{this.firstname}} {{this.lastname}} {{myHelper this}}</li>
+            {{/if}}
+            {{/coolpeople}}
+        </ul>
+    </div>
+</div>
+
+<a href="/logout">logout</a>

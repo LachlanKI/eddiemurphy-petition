@@ -1,0 +1,64 @@
+
+<main>
+    <div id="info">
+        <div id="hits">
+            <h3 id="smash">smash hits include</h3>
+            <ul>
+                <li>party all the time - 1985
+                <li>oh ja ja - 2015
+                <li>whatzupwitu - 1989
+                <li>boogie in your butt - 1996
+                <li>put your mouth on me - 1989
+            </ul>
+            {{#if oops}}
+            <h3 class="oops">something went wrong</h3>
+            {{/if}}
+        </div>
+        <div id="canvas">
+            <select id="colour" name="colour">
+                <option value="#000">blk</option>
+                <option value="#fff">wht</option>
+                <option value="#2EC03E">grn</option>
+                <option value="#F31E09">red</option>
+                <option value="#E309EE">pnk</option>
+                <option value="#2A70FC">blu</option>
+                <option value="#FF8707">orng</option>
+                <option value="#8232FC">prpl</option>
+                <option value="#FFF300">yllw</option>
+                <option value="#969696">gry</option>
+            </select>
+            <div id="controls">
+                <button id="clear" name="clear">clear</button>
+                <div id="submit">
+                    <form action="/submitSignature" method="post">
+                        <input id="sigVal" type="hidden" name="sig" value="">
+                        <button type="submit">murph</button>
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    </form>
+                </div>
+            </div>
+            <select id="size" name="size">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+</div>
+
+
+    <div id='canv-wrap'>
+        <canvas width="351" height="500"></canvas>
+    </div>
+
+</main>
+
+<a href="/logout">logout</a>
+
+<audio loop id="axlf" src="/public/audio/axlf.mp3"></audio>

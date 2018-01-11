@@ -1,0 +1,21 @@
+
+<div id="profile-wrap">
+    <div id="profile-wrap2">
+        <form id="profile" action="/user-info" method="post">
+            <div id="profile-input-wrap">
+                <input type="number" name="age" placeholder="age">
+                <input type="text" name="city" placeholder="city">
+                <input type="text" name="homepage" placeholder="homepage">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            </div>
+            <button type="submit">continue</button>
+        </form>
+        <img src="/public/imgs/eddie-adidas.png" alt="eddie in his fav get up">
+    </div>
+
+    <h1>give us more of your personal information</h1>
+    {{#if oops}}
+    <h3 class="oops">{{oops}}</h3>
+    {{/if}}
+
+</div>

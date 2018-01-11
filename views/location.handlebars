@@ -1,0 +1,16 @@
+<div id="cool">
+    <h3>other eddheads in {{city}}</h3>
+<div id="list">
+    <ul>
+        {{#coolpeople}}
+        {{#if this.homepage}}
+        <li><a href="http://{{this.homepage}}" target="_blank">{{this.firstname}} {{this.lastname}}</a> {{myHelper this}}</li>
+        {{else}}
+        <li>{{this.firstname}} {{this.lastname}} {{myHelper this}}</li>  <!-- this is the helper function -->
+        {{/if}}
+        {{/coolpeople}}
+    </ul>
+</div>
+</div>
+
+<a href="/logout">logout</a>

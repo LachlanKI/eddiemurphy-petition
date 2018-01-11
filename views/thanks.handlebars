@@ -1,0 +1,16 @@
+<div id="thanks">
+    <h1>{{name}} respects the movement</h1>
+    <div id="murpher">
+        <img id="sg" src="{{sig}}" alt="your signature mate">
+        <img id="ed" src="/public/imgs/theMurph.jpg" alt="murphy">
+    </div>
+    <div id="other">
+        <a href="/cool-people">see who's partying all the time?</a>
+        <a href="/update-profile">update your profile</a>
+        <form action="/delete-sig" method="post">
+            <button type="submit">delete sig</button>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        </form>
+    </div>
+</div>
+<a href="/logout">logout</a>

@@ -1,0 +1,17 @@
+<div class="register-wrap">
+    <form  id="register" action="/register" method="post">
+        <input type="text" name="first" placeholder="first name">
+        <input type="text" name="second" placeholder="surname">
+        <input type="text" name="email" placeholder="email address">
+        <input type="password" name="password" placeholder="password">
+        <button type="submit">register</button>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    </form>
+
+    {{#if oops}}
+    <h3 class="oops">{{oops}}</h3>
+    {{/if}}
+
+    <audio id="eddie-creep" src="/public/audio/eddie.mp3"></audio>
+    <a id="login-link" href="/login">already registered?</a>
+</div>

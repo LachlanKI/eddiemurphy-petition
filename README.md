@@ -1,7 +1,7 @@
 # Lachlan Kosaniuk Innes_
   [linkedin_](https://www.linkedin.com/in/lachlanki/)
 
-Who doesn't like to party all the time? A petition site to get Eddie Murphy into the Rock and Roll hall of Fame.
+Who doesn't like to party all the time? A petition site to get Eddie Murphy into the Rock and Roll Hall of Fame.
 
  ## technologies_
  - **frontend** > HTML, CSS, jQuery, express-handlebars
